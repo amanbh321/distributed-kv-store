@@ -35,14 +35,14 @@ This project implements a distributed key-value store system with:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/distributed-kv-store.git
+git clone https://github.com/amanbh321/distributed-kv-store.git
 cd distributed-kv-store
 ```
 
 2. Create and activate virtual environment:
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+python3 -m venv cloudvenv
+source cloudvenv/bin/activate  
 ```
 
 3. Install dependencies:
@@ -83,7 +83,7 @@ See `config.py` for system configuration including:
 
 ## 🎓 Course Project
 
-This project is part of a Cloud Computing course, demonstrating:
+This project is part of my Cloud Computing course, demonstrating:
 - Distributed systems design
 - Fault tolerance mechanisms
 - REST API development
