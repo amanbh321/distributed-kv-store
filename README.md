@@ -89,10 +89,11 @@ This project is part of my Cloud Computing course, demonstrating:
 - REST API development
 - Replication strategies
 
-## 👤 Author
+## 👤 Team members
 
-*Aman Bahuguna* - Cloud Computing Course Project
+*Aman Bahuguna*
+*Soumik Pal*
 
 ---
 
-**Status**: 🚧 In Development - Step 1 Complete (Project Setup)
+**Status**: 🚧 In Development - Step 2 Complete (controller node implementation)
