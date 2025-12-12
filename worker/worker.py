@@ -114,6 +114,20 @@ def put_key():
             if replicate_to_worker(other_replicas[1], key, value):
                 replicas_written += 1
         
+        # Notify controller about the PUT operation
+        try:
+            notify_response = requests.post(
+                f"http://{CONTROLLER_HOST}:{CONTROLLER_PORT}/notify_put",
+                json={
+                    'worker_id': worker_id,
+                    'key': key,
+                    'replicas': replica_data.get('replica_ids', [])
+                },
+                timeout=2
+            )
+        except:
+            pass  # Don't fail PUT if notification fails
+        
         # Check if we have enough replicas
         if replicas_written >= SYNC_REPLICAS:
             print(f"✓ PUT successful: {replicas_written}/{REPLICATION_FACTOR} replicas written")
